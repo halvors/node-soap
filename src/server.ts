@@ -649,7 +649,7 @@ export class Server extends EventEmitter {
       // Soap 1.1 error style
       // Root element will be prependend with the soap NS
       // It must match the NS defined in the Envelope (set by the _envelope method)
-      fault = this.wsdl.objectToDocumentXML('soap:Fault', soapFault, undefined);
+      fault = this.wsdl.objectToDocumentXML('s:Fault', soapFault, undefined);
     } else {
       // Soap 1.2 error style.
       // 3rd param is the NS prepended to all elements
